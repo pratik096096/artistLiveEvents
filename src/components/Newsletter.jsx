@@ -19,7 +19,7 @@ function Newsletter() {
 
       if (response.ok) {
         setMessage("Subscribed successfully!");
-        setEmail(""); 
+        setEmail("");
         
       } else {
         setMessage("Failed to subscribe. Please try again.");
