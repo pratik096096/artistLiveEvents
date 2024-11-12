@@ -30,7 +30,7 @@ function CitySelector() {
     setError(null);
 
     try {
-      const response = await fetch(` https://ca0a-103-182-221-161.ngrok-free.app/api/events/${city}`);
+      const response = await fetch(`https://ca0a-103-182-221-161.ngrok-free.app/api/events/${city}`);
       if (!response.ok) {
         throw new Error("Failed to fetch events.");
       }
