@@ -9,7 +9,7 @@ function Newsletter() {
     setMessage(""); // Reset the message
 
     try {
-      const response = await fetch(`https://131e-103-182-221-161.ngrok-free.app/api/subscribe`, {
+      const response = await fetch(`http://localhost:8080/api/subscribe`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -19,7 +19,7 @@ function Newsletter() {
 
       if (response.ok) {
         setMessage("Subscribed successfully!");
-        setEmail("");
+        setEmail(""); 
         
       } else {
         setMessage("Failed to subscribe. Please try again.");

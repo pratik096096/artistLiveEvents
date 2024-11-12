@@ -184,7 +184,7 @@ function AdminContainer() {
     setError(null);
 
     try {
-      const response = await fetch(`https://131e-103-182-221-161.ngrok-free.app/api/events/${city}`);
+      const response = await fetch(`http://localhost:8080/api/events/${city}`);
       
       if (!response.ok) {
         throw new Error("Failed to fetch events.");
@@ -220,7 +220,7 @@ function AdminContainer() {
   const handleToggleLive = async (eventId, currentStatus) => {
     try {
       const response = await fetch(
-        `https://131e-103-182-221-161.ngrok-free.app/events/${eventId}?isLive=${!currentStatus}`,
+        `http://localhost:8080/api/events/${eventId}?isLive=${!currentStatus}`,
         {
           method: "PUT",
           headers: {
@@ -255,7 +255,7 @@ function AdminContainer() {
   const handleDeleteEvent = async (eventId) => {
     try {
       const response = await fetch(
-        `https://131e-103-182-221-161.ngrok-free.app/api/events/${eventId}`,
+        `http://localhost:8080/api/events/${eventId}`,
         {
           method: "DELETE",
         }
