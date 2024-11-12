@@ -9,7 +9,7 @@ function Newsletter() {
     setMessage(""); // Reset the message
 
     try {
-      const response = await fetch(`http://localhost:8080/api/subscribe`, {
+      const response = await fetch(` https://ca0a-103-182-221-161.ngrok-free.app/api/subscribe`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

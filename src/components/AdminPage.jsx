@@ -33,7 +33,7 @@ function AdminPage() {
 
     // Make a POST request to store the data
     try {
-      const response = await fetch(`http://localhost:8080/api/events/${selectedCity}`, {
+      const response = await fetch(` https://ca0a-103-182-221-161.ngrok-free.app/api/events/${selectedCity}`, {
         method: 'POST',
         body: formData,
       });
