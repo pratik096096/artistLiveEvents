@@ -67,6 +67,13 @@ Make sure you have the following installed:
      spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
      spring.datasource.username=your_username
      spring.datasource.password=your_password
+     # Email Configuration
+     spring.mail.host=smtp.gmail.com
+     spring.mail.port=587
+     spring.mail.username=${mail_username}
+     spring.mail.password=${mail_password}
+     spring.mail.properties.mail.smtp.auth=true
+     spring.mail.properties.mail.smtp.starttls.enable=true
      ```
    - Run the Spring Boot application:
      ```bash
