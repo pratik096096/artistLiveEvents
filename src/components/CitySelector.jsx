@@ -62,7 +62,7 @@ function CitySelector() {
     if (!selectedCity) return; // Don't open WebSocket connection until a city is selected
 
     // Create a SockJS WebSocket connection
-    const socket = new SockJS(`http://localhost:8080/ws`); // WebSocket URL
+    const socket = new SockJS(`https://131e-103-182-221-161.ngrok-free.app/ws`); // WebSocket URL
 
     // Create a Stomp client instance
     const stompClient = new Client({
