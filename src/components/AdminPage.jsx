@@ -33,7 +33,7 @@ function AdminPage() {
 
     // Make a POST request to store the data
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/events/${selectedCity}`, {
+      const response = await fetch(`http://localhost:8080/api/events/${selectedCity}`, {
         method: 'POST',
         body: formData,
       });

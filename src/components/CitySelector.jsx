@@ -30,7 +30,7 @@ function CitySelector() {
     setError(null);
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/events/${city}`);
+      const response = await fetch(`http://localhost:8080/api/events/${city}`);
       if (!response.ok) {
         throw new Error("Failed to fetch events.");
       }
@@ -62,7 +62,7 @@ function CitySelector() {
     if (!selectedCity) return; // Don't open WebSocket connection until a city is selected
 
     // Create a SockJS WebSocket connection
-    const socket = new SockJS(`${process.env.REACT_APP_API_URL}/ws`); // WebSocket URL
+    const socket = new SockJS(`http://localhost:8080/ws`); // WebSocket URL
 
     // Create a Stomp client instance
     const stompClient = new Client({

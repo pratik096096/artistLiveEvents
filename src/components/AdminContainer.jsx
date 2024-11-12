@@ -184,8 +184,8 @@ function AdminContainer() {
     setError(null);
 
     try {
-      // const response = await fetch(`http://localhost:8080/api/events/${city}`);
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/events/${city}`);
+      const response = await fetch(`http://localhost:8080/api/events/${city}`);
+      
       if (!response.ok) {
         throw new Error("Failed to fetch events.");
       }
@@ -220,7 +220,7 @@ function AdminContainer() {
   const handleToggleLive = async (eventId, currentStatus) => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/api/events/${eventId}?isLive=${!currentStatus}`,
+        `http://localhost:8080/api/events/${eventId}?isLive=${!currentStatus}`,
         {
           method: "PUT",
           headers: {
@@ -255,7 +255,7 @@ function AdminContainer() {
   const handleDeleteEvent = async (eventId) => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/api/events/${eventId}`,
+        `http://localhost:8080/api/events/${eventId}`,
         {
           method: "DELETE",
         }
